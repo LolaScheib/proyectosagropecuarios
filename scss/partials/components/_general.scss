@@ -1,0 +1,60 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+main {
+  background-color: variables.$background-color;
+  padding: 40px 20px;
+  border-radius: 10px;
+  min-height: 80vh;
+}
+
+.article {
+  background-color: variables.$background-color;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  border-radius: 0;
+}
+
+.img-index-1,
+.img-pregfrec-1 {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  border-radius: 0;
+}
+
+.pregunta {
+  border: 1px solid variables.$accent-color;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.boton-pregunta {
+  background-color: variables.$background-color;
+  color: variables.$primary-color;
+  font-family: "Mulish", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  box-shadow: none;
+  padding: 15px 20px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($accent-color, 10%);
+    color: variables.$secondary-color;
+  }
+}
+
+.cuerpo-respuesta {
+  background-color: #ffffff;
+  color: variables.$p-color;
+  padding: 20px;
+  font-size: 17px;
+  border-top: 1px solid variables.$accent-color;
+  font-family: "Nunito", sans-serif;
+}
