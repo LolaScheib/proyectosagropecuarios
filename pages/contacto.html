@@ -20,11 +20,10 @@
     <header>
       <nav class="navbar navbar-expand-lg barra-navegacion">
         <div class="container-fluid">
-          <!-- LOGO  -->
           <a class="navbar-brand logo-proyectos" href="../index.html">
             <img class="logo-proyectos" src="../assets/logo.png" alt="PA" />
           </a>
-          <!-- BOTÓN MENÚ HAMBURGUESA -->
+
           <button
             class="navbar-toggler boton-menu-movil"
             type="button"
@@ -76,14 +75,13 @@
           </div>
         </div>
       </nav>
-      <!-- HICE CON BOOTSTRAP -->
     </header>
     <main>
-      <section class="container-fluid">
+      <section class="container my-5">
         <h1 class="mb-4">Dejanos tu consulta</h1>
         <form>
           <div class="row">
-            <div class="mb-3 col-12">
+            <div class="mb-3 col-12 col-md-6">
               <label for="nombre" class="form-label">Nombre y Apellido</label>
               <input
                 type="text"
@@ -93,27 +91,8 @@
                 required
               />
             </div>
-            <div class="mb-3 col-12 col-md-6 col-lg-4">
-              <label for="pais" class="form-label">País</label>
-              <input
-                type="text"
-                class="form-control"
-                id="pais"
-                placeholder="Ej: Argentina"
-                required
-              />
-            </div>
-            <div class="mb-3 col-12 col-md-6 col-lg-4">
-              <label for="consulta" class="form-label">Consulta</label>
-              <input
-                type="text"
-                class="form-control"
-                id="consulta"
-                placeholder="Escribí tu consulta aquí"
-                required
-              />
-            </div>
-            <div class="mb-3 col-12 col-lg-4">
+
+            <div class="mb-3 col-12 col-md-6">
               <label for="email" class="form-label">Correo electrónico</label>
               <input
                 type="email"
@@ -123,48 +102,100 @@
                 required
               />
             </div>
+
+            <div class="mb-3 col-12 col-md-6">
+              <label for="pais" class="form-label">País</label>
+              <input
+                type="text"
+                class="form-control"
+                id="pais"
+                placeholder="Ej: Argentina"
+                required
+              />
+            </div>
+
+            <div class="mb-3 col-12 col-md-6">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="telefono"
+                placeholder="+54 9 3512467859"
+              />
+            </div>
+
+            <div class="mb-3 col-12">
+              <label for="motivo" class="form-label">Motivo de consulta</label>
+              <select class="form-select" id="motivo" required>
+                <option value="" disabled selected>
+                  Seleccioná una opción
+                </option>
+                <option>Asesoramiento</option>
+                <option>Propuesta de proyecto</option>
+                <option>Consultas generales</option>
+                <option>Otro</option>
+              </select>
+            </div>
+
+            <div class="mb-3 col-12">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea
+                class="form-control"
+                id="mensaje"
+                rows="5"
+                placeholder="Escribí tu mensaje aquí..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="mb-3 col-12">
+              <label for="conociste" class="form-label"
+                >¿Cómo nos conociste?</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="conociste"
+                placeholder="Ej: Redes sociales, recomendación, etc."
+              />
+            </div>
+
+            <div class="form-check mb-3 col-12">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="suscripcion"
+              />
+              <label class="form-check-label" for="suscripcion">
+                Quiero recibir novedades y actualizaciones
+              </label>
+            </div>
+
+            <div class="form-check mb-4 col-12">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="terminos"
+                required
+              />
+              <label class="form-check-label" for="terminos">
+                Acepto los érminos y condiciones
+              </label>
+            </div>
+
+            <div class="col-12">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                Enviar consulta
+              </button>
+            </div>
           </div>
-          <button
-            type="submit"
-            class="btn btn-primary"
-            data-aos="flip-left"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
-          >
-            Enviar
-          </button>
         </form>
-
-        <section class="mt-5">
-          <h2>Otras formas de contactarnos</h2>
-          <p>
-            Además del formulario, podés comunicarte con nosotros por los
-            siguientes medios:
-          </p>
-          <ul class="list-unstyled">
-            <li><strong>Email:</strong> contacto@proyectosagropecuarios.com</li>
-            <li><strong>Teléfono:</strong> +54 9 3515478963</li>
-            <li>
-              <strong>Dirección:</strong> Av. Rafael Nuñez 4849, Córdoba
-              Argentina
-            </li>
-          </ul>
-        </section>
-
-        <div class="ubicacion-section mt-5">
-          <h2 class="mb-3">Ubicación</h2>
-          <p>
-            Estamos ubicados en el corazón del campo argentino. Podés visitarnos
-            en nuestras oficinas.
-          </p>
-          <div class="text-center">
-            <img
-              src="../assets/ubicacion-empresa.jpg"
-              alt="Ubicación de la empresa"
-              class="img-fluid rounded shadow-sm ubicacion-img"
-            />
-          </div>
-        </div>
       </section>
     </main>
     <footer class="footer">
