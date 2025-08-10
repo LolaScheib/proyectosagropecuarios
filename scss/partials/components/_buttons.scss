@@ -1,54 +1,78 @@
 @use "../utilities/variables";
-@use "../utilities/mixins";
 
-// === BOTÓN BASE ===
 %button {
   display: inline-block;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: variables.$p-size;
   font-family: "Mulish", sans-serif;
-  font-weight: 600;
+  font-weight: variables.$font-weight-semibold;
   text-align: center;
-  text-decoration: none;
-  border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  border: none;
+  transition: background-color 0.3s ease;
 }
 
-// === BOTÓN PRIMARIO ===
 button.btn.btn-primary {
   @extend %button;
-  font-size: 20px;
-  padding: 12px 30px;
   background-color: variables.$primary-color;
   color: white;
-  border: 1px solid variables.$primary-color;
+  padding: 12px 30px;
+  font-size: 20px;
 
   &:hover {
-    background-color: darken(variables.$primary-color, 10%);
+    background-color: variables.$accent-color-hover;
   }
 }
 
-// === BOTÓN PERSONALIZADO ===
 .btn-mio {
   @extend %button;
   background-color: variables.$primary-color;
   color: white;
 
   &:hover {
-    background-color: darken(variables.$primary-color, 10%);
+    background-color: variables.$accent-color-hover;
   }
 }
 
-// === BOTÓN PARA SIMULADOR ===
 .button-enviar-simu {
   @extend %button;
-  font-size: 30px;
   background-color: variables.$accent-color;
-  color: #1e2a38;
+  color: variables.$title-color;
+  font-size: 30px;
 
   &:hover {
-    background-color: darken(variables.$accent-color, 10%);
+    background-color: variables.$accent-color-hover;
+  }
+}
+
+.boton-menu-movil {
+  @extend %button;
+  background-color: variables.$secondary-color;
+  color: white;
+  padding: 8px 16px;
+
+  &:hover {
+    background-color: variables.$accent-color-hover;
+  }
+}
+
+.boton-pregunta-frecuente {
+  @extend %button;
+  width: 100%;
+  background-color: variables.$background-color;
+  color: variables.$primary-color;
+  border: 1px solid variables.$accent-color;
+  font-weight: variables.$font-weight-regular;
+  padding: 10px 18px;
+  border-radius: 4px;
+
+  &.collapsed {
+    background-color: white;
+  }
+
+  &:hover {
+    background-color: variables.$accent-color;
+    color: white;
   }
 }

@@ -1,24 +1,16 @@
 @use "../utilities/mixins";
+@use "../utilities/variables";
 
-.card-proyectos-simulados {
-  min-height: 550px;
-  max-width: 100%;
-  width: 100%;
-  transition: transform 0.3s ease;
-  margin: 20px;
-  @include mixins.flex(column, center, center);
-
-  &:hover {
-    transform: scale(1.02);
-  }
-}
-
-.card-title {
+%card-title {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: variables.$font-weight-semibold;
   font-size: 18px;
   margin-top: 15px;
   margin-bottom: 5px;
   color: variables.$title-color;
+}
+
+.card-title {
+  @extend %card-title;
 }

@@ -1,7 +1,6 @@
 @use "../utilities/variables";
 @use "../utilities/mixins";
 
-// === NAVBAR MÓVIL ===
 .navbar {
   .boton-menu-movil {
     border: none;
@@ -15,7 +14,6 @@
   }
 }
 
-// === BARRA PRINCIPAL DE NAVEGACIÓN ===
 .barra-navegacion {
   background-color: variables.$background-color;
   padding: 1rem 2rem;
@@ -23,13 +21,11 @@
   border-bottom: 1px solid variables.$accent-color;
 }
 
-// === CONTENIDO FLEXIBLE DE LA NAV ===
 .contenido-navegacion {
   @include mixins.flex(row, center, center);
   flex-basis: 100%;
 }
 
-// === MENÚ DE NAVEGACIÓN ===
 .menu-navegacion {
   @include mixins.flex(row, space-between, center);
   width: 100%;
@@ -43,7 +39,7 @@
   margin: 0 10px;
   padding: 5px 10px;
   border-radius: 4px;
-  list-style-type: none;
+  list-style: none;
   transition: background-color 0.3s ease;
 
   &:hover {
@@ -51,12 +47,11 @@
   }
 }
 
-// === LINKS DEL MENÚ ===
 .link-menu {
   padding: 0 15px;
-  color: black;
+  color: variables.$p-color;
   text-decoration: none;
-  transition: 0.3s;
+  transition: color 0.3s ease;
 
   &:hover {
     color: variables.$primary-color;
@@ -64,14 +59,12 @@
   }
 }
 
-// === TEXTO DE LOS ÍTEMS DEL MENÚ ===
-
 .texto-menu {
   font-size: 16px;
   text-align: center;
+  font-family: "Nunito", sans-serif;
 }
 
-// === LOGO PRINCIPAL ===
 .logo-proyectos {
   height: 80px;
   width: auto;
@@ -81,9 +74,8 @@
   border-radius: 4px;
 }
 
-// === ÍCONO HAMBURGUESA (mobile) ===
 .icono-hamburguesa {
-  background-image: url(../assets/icono-menu.png);
+  background-image: url("../assets/icono-menu.png");
   background-size: cover;
   background-position: center;
   width: 30px;
