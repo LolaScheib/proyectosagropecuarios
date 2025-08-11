@@ -1,4 +1,5 @@
 @use "../utilities/variables";
+@use "../utilities/media";
 
 html,
 body {
@@ -14,6 +15,14 @@ main {
   flex-grow: 1;
   padding: 40px 20px;
   border-radius: 10px;
+
+  @include media.tablet {
+    padding: 30px 15px;
+  }
+
+  @include media.cel {
+    padding: 20px 10px;
+  }
 }
 
 .article {
@@ -21,6 +30,10 @@ main {
   padding: 20px 25px;
   margin-bottom: 20px;
   border-radius: 0;
+
+  @include media.cel {
+    padding: 15px 10px;
+  }
 }
 
 .carousel {
@@ -32,6 +45,14 @@ main {
     height: 400px;
     overflow: hidden;
     border-radius: 10px;
+
+    @include media.tablet {
+      height: 300px;
+    }
+
+    @include media.cel {
+      height: 200px;
+    }
 
     .carousel-item {
       width: 100%;
@@ -60,4 +81,12 @@ main {
   margin: 0 auto;
   border-radius: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  @include media.tablet {
+    height: 40vh;
+  }
+
+  @include media.cel {
+    height: 30vh;
+  }
 }

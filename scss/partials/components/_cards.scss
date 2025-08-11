@@ -1,5 +1,5 @@
-@use "../utilities/mixins";
 @use "../utilities/variables";
+@use "../utilities/media";
 
 %card-title {
   text-align: center;
@@ -9,6 +9,16 @@
   margin-top: 15px;
   margin-bottom: 5px;
   color: variables.$title-color;
+
+  @include media.tablet {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  @include media.cel {
+    font-size: 14px;
+    margin-top: 10px;
+  }
 }
 
 .card-title {

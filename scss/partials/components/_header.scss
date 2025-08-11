@@ -1,4 +1,5 @@
 @use "../utilities/variables";
+@use "../utilities/media";
 @use "../utilities/mixins";
 
 .navbar {
@@ -19,11 +20,27 @@
   padding: 1rem 2rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid variables.$accent-color;
+
+  @include media.tablet {
+    padding: 0.8rem 1.5rem;
+  }
+
+  @include media.cel {
+    padding: 0.5rem 1rem;
+  }
 }
 
 .contenido-navegacion {
   @include mixins.flex(row, center, center);
   flex-basis: 100%;
+
+  @include media.tablet {
+    @include mixins.flex(row, space-between, center);
+  }
+
+  @include media.cel {
+    flex-direction: column;
+  }
 }
 
 .menu-navegacion {
@@ -33,6 +50,15 @@
   margin: 0;
   background-color: variables.$background-color;
   border-bottom: 1px solid variables.$secondary-color;
+
+  @include media.tablet {
+    flex-wrap: wrap;
+  }
+
+  @include media.cel {
+    flex-direction: column;
+    border-bottom: none;
+  }
 }
 
 .item-menu {
@@ -44,6 +70,14 @@
 
   &:hover {
     background-color: variables.$accent-color;
+  }
+
+  @include media.tablet {
+    margin: 8px 6px;
+  }
+
+  @include media.cel {
+    margin: 5px 0;
   }
 }
 
@@ -57,12 +91,28 @@
     color: variables.$primary-color;
     text-decoration: underline;
   }
+
+  @include media.tablet {
+    padding: 0 10px;
+  }
+
+  @include media.cel {
+    padding: 0 8px;
+  }
 }
 
 .texto-menu {
   font-size: 16px;
   text-align: center;
   font-family: "Nunito", sans-serif;
+
+  @include media.tablet {
+    font-size: 15px;
+  }
+
+  @include media.cel {
+    font-size: 14px;
+  }
 }
 
 .logo-proyectos {
@@ -72,6 +122,16 @@
   margin-top: -10px;
   object-fit: contain;
   border-radius: 4px;
+
+  @include media.tablet {
+    height: 70px;
+    margin-right: 12px;
+  }
+
+  @include media.cel {
+    height: 60px;
+    margin-right: 8px;
+  }
 }
 
 .icono-hamburguesa {

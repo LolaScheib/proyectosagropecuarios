@@ -1,5 +1,5 @@
 @use "../utilities/variables";
-@use "../utilities/mixins";
+@use "../utilities/media";
 
 .footer {
   width: 100%;
@@ -8,6 +8,14 @@
   text-align: center;
   box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.08);
   border-top: 1px solid variables.$accent-color;
+
+  @include media.tablet {
+    padding: 1.5rem 1rem;
+  }
+
+  @include media.cel {
+    padding: 1rem 0.5rem;
+  }
 }
 
 .footer-logo {
@@ -16,6 +24,11 @@
   margin-bottom: 1rem;
   opacity: 0.9;
   transition: opacity 0.3s ease;
+
+  @include media.cel {
+    width: 120px;
+    margin-bottom: 0.8rem;
+  }
 
   &:hover {
     opacity: 1;
@@ -26,4 +39,8 @@ p.footer-copy {
   font-size: 0.85rem;
   color: variables.$secondary-color;
   margin: 0;
+
+  @include media.cel {
+    font-size: 0.75rem;
+  }
 }
