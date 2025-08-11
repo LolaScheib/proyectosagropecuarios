@@ -53,7 +53,7 @@ p {
 
 .titulo-principal {
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 45px;
   color: #1b4f46;
   text-align: center;
   letter-spacing: 2px;
@@ -389,7 +389,11 @@ main {
   }
 }
 
-.boton-pregunta-frecuente, .boton-menu-movil, .button-enviar-simu, .btn-mio, button.btn.btn-primary {
+.boton-pregunta-frecuente,
+.boton-menu-movil,
+.button-enviar-simu,
+.btn-mio,
+button.btn.btn-primary {
   display: inline-block;
   padding: 10px 20px;
   font-size: 18px;
