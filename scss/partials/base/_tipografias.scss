@@ -11,17 +11,30 @@ body {
   text-align: justify;
 }
 
+@use "../utilities/variables";
+@use "../utilities/media";
+
 p {
   font-family: "Nunito", sans-serif;
   font-weight: variables.$font-weight-regular;
   font-size: variables.$p-size;
   color: variables.$p-color;
   margin-bottom: 16px;
+
+  @include media.tablet {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+
+  @include media.cel {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
 }
 
 .titulo-principal {
   font-family: "Poppins", sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   color: variables.$primary-color;
   text-align: center;
   letter-spacing: 2px;
@@ -30,18 +43,18 @@ p {
   line-height: 1.2;
 
   @include media.tablet {
-    font-size: 25px;
+    font-size: 18px;
   }
 
   @include media.cel {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
 .subtitulo {
   font-family: "Mulish", sans-serif;
   font-weight: variables.$font-weight-semibold;
-  font-size: 25px;
+  font-size: 15px;
   color: variables.$primary-color;
   text-align: center;
   border-bottom: 1.5px solid variables.$accent-color;
@@ -50,27 +63,27 @@ p {
   letter-spacing: 0.5px;
 
   @include media.tablet {
-    font-size: 20px;
+    font-size: 13px;
   }
 
   @include media.cel {
-    font-size: 15px;
+    font-size: 11px;
   }
 }
 
 .titulo-secundario {
   font-family: "Montserrat", sans-serif;
   font-weight: variables.$font-weight-bold;
-  font-size: 20px;
+  font-size: 13px;
   color: variables.$primary-color;
   text-align: left;
   margin: 50px 0 10px 0;
 
   @include media.tablet {
-    font-size: 15px;
+    font-size: 10px;
   }
 
   @include media.cel {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
