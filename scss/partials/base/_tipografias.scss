@@ -5,17 +5,17 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  font-size: variables.$p-size; // asumo que está bien para desktop
+  font-size: variables.$p-size;
   color: variables.$p-color;
   line-height: 1.6;
   text-align: justify;
 
   @include media.tablet {
-    font-size: 1rem; // tamaño base para tablet
+    font-size: 1rem;
   }
 
   @include media.cel {
-    font-size: 0.9rem; // más pequeño para celular
+    font-size: 0.9rem;
   }
 }
 
@@ -32,7 +32,7 @@ p {
   }
 
   @include media.cel {
-    font-size: 10px;
+    font-size: 15px;
     margin-bottom: 12px;
   }
 }
@@ -52,7 +52,7 @@ p {
   }
 
   @include media.cel {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 
@@ -72,7 +72,7 @@ p {
   }
 
   @include media.cel {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 
@@ -89,6 +89,6 @@ p {
   }
 
   @include media.cel {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
