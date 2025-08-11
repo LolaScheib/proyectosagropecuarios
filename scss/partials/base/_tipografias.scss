@@ -5,14 +5,19 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  font-size: variables.$p-size;
+  font-size: variables.$p-size; // asumo que está bien para desktop
   color: variables.$p-color;
   line-height: 1.6;
   text-align: justify;
-}
 
-@use "../utilities/variables";
-@use "../utilities/media";
+  @include media.tablet {
+    font-size: 1rem; // tamaño base para tablet
+  }
+
+  @include media.cel {
+    font-size: 0.9rem; // más pequeño para celular
+  }
+}
 
 p {
   font-family: "Nunito", sans-serif;
@@ -22,19 +27,19 @@ p {
   margin-bottom: 16px;
 
   @include media.tablet {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin-bottom: 14px;
   }
 
   @include media.cel {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     margin-bottom: 12px;
   }
 }
 
 .titulo-principal {
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 36px;
   color: variables.$primary-color;
   text-align: center;
   letter-spacing: 2px;
@@ -43,18 +48,18 @@ p {
   line-height: 1.2;
 
   @include media.tablet {
-    font-size: 18px;
+    font-size: 28px;
   }
 
   @include media.cel {
-    font-size: 16px;
+    font-size: 24px;
   }
 }
 
 .subtitulo {
   font-family: "Mulish", sans-serif;
   font-weight: variables.$font-weight-semibold;
-  font-size: 15px;
+  font-size: 24px;
   color: variables.$primary-color;
   text-align: center;
   border-bottom: 1.5px solid variables.$accent-color;
@@ -63,27 +68,27 @@ p {
   letter-spacing: 0.5px;
 
   @include media.tablet {
-    font-size: 13px;
+    font-size: 20px;
   }
 
   @include media.cel {
-    font-size: 11px;
+    font-size: 18px;
   }
 }
 
 .titulo-secundario {
   font-family: "Montserrat", sans-serif;
   font-weight: variables.$font-weight-bold;
-  font-size: 13px;
+  font-size: 20px;
   color: variables.$primary-color;
   text-align: left;
   margin: 50px 0 10px 0;
 
   @include media.tablet {
-    font-size: 10px;
+    font-size: 18px;
   }
 
   @include media.cel {
-    font-size: 9px;
+    font-size: 16px;
   }
 }
